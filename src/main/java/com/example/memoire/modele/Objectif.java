@@ -14,7 +14,7 @@ public class Objectif implements Serializable {
     private String libelleObjectif;
 //    public Action[] actions;
     public Programme programme;
-
+    public Objectif(){}
     public Objectif(String libelleObjectif, Programme programme) {
       
         this.libelleObjectif = libelleObjectif;

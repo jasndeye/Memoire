@@ -13,42 +13,36 @@ public class Programme implements Serializable {
     @Column(name = "Idprogramme")
     private Integer idProgramme;
     private String libelleProgrammer;
-    private float budget;
+    private String nomCourt;
+    private Float budget;
     private String description;
     private Date dateDebut;
-    // public Objectif[] objectifs;
+    private Date dateFin;
 
-    public Programme(String libelleProgramme, String description, Float budget, Date date) {
-      
-        this.libelleProgrammer = libelleProgramme;
+    public Programme(){}
+    public Programme(Integer idProgramme,String libelleProgrammer,String nomCourt, String description, Float budget, Date dateDebut, Date dateFin) 
+    {
+        this.idProgramme = idProgramme;
+        this.libelleProgrammer = libelleProgrammer;
+        this.nomCourt = nomCourt;
         this.description = description;
         this.budget = budget;
-        this.dateDebut=date;
-    }
-    
-
-    public Date getDateDebut() {
-        return dateDebut;
-    }
-
-
-    public void setDateDebut(Date dateDebut) {
         this.dateDebut = dateDebut;
-    }
-
-
-    public Programme(){
-
+        this.dateFin = dateFin;
     }
 
     public String getLibelleProgramme() {
         return libelleProgrammer;
     }
-
     public void setLibelleProgramme(String libelleProgramme) {
         this.libelleProgrammer = libelleProgramme;
     }
-
+    public String getNomCourt() {
+        return nomCourt;
+    }
+    public void setNomCourt(String nomCourt) {
+        this.nomCourt = nomCourt;
+    }
 
     public String getDescription() {
         return description;
@@ -60,9 +54,21 @@ public class Programme implements Serializable {
     public Float getBudget() {
         return budget;
     }
-
     public void setBudget(Float budget) {
         this.budget = budget;
+    }
+    public Date getDateDebut() {
+        return dateDebut;
+    }
+
+    public void setDateDebut(Date dateDebut) {
+        this.dateDebut = dateDebut;
+    }
+    public Date getDateFin() {
+        return dateFin;
+    }
+    public void setDateFin(Date dateFin) {
+        this.dateFin = dateFin;
     }
 
 }
